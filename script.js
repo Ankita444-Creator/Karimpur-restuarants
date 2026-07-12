@@ -8,8 +8,7 @@ const restaurants = [
             "Chicken Club Burger: ₹69",
             "Hakka Noodles: ₹69/79/89"
         ],
-        // এখানে গুগল ম্যাপের লোকেশন লিংক বসাবেন
-        mapLink: "https://maps.app.goo.gl/tLT9G1c4dii3RJVM8?g_st=ac" 
+        mapLink: "https://maps.app.goo.gl/tLT9G1c4dii3RJVM8?g_st=ac"
     }
 ];
 
