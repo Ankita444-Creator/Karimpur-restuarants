@@ -36,6 +36,18 @@ const restaurants = [
             "Paneer Roll: ₹70"
         ],
         mapLink: "https://maps.app.goo.gl/WAZ6HHSGyZCe8y6n6"
+    },
+    {
+        name: "One Bite",
+        phone: "06294598998",
+        rating: 4.6,
+        items: [
+            "Chicken Fried Rice: ₹115", 
+            "Chicken Pakora (8 pieces): ₹85", 
+            "Chilli Chicken Gravy: ₹139", 
+            "Blue Legon Virgin Mojito: ₹89"
+        ],
+        mapLink: "https://maps.app.goo.gl/t1xQcbYNdX6hbexYA"
     }
 ];
 
