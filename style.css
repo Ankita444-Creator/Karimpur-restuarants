@@ -50,6 +50,13 @@ header {
 
 .map-btn:hover { background-color: #218838; }
 
+/* Contact section (Ager moto) */
+.contact-container {
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
 /* অ্যানিমেশনসমূহ */
 @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
