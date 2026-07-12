@@ -37,3 +37,18 @@ header { text-align: center; background: #ff4500; color: white; padding: 30px; b
 .map-btn {
     transition: background 0.3s;
 }
+/* Header animation */
+header {
+    animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
