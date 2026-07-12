@@ -60,6 +60,18 @@ const restaurants = [
             "French Fries: ₹60"
         ],
         mapLink: "https://maps.app.goo.gl/XJmYnTYSNn9muS9M8?g_st=ac"
+    },
+    {
+        name: "Cafe Heaven",
+        phone: "07003798789",
+        rating: 4.5,
+        items: [
+            "Chicken Biryani: ₹130", 
+            "Chicken Kosha: ₹150", 
+            "Paneer Butter Masala: ₹110", 
+            "Veg Fried Rice: ₹90"
+        ],
+        mapLink: "https://maps.app.goo.gl/99nECNq4k2pqJs3E9?g_st=ac"
     }
 ];
 
