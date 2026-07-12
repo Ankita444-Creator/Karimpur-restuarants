@@ -1,7 +1,36 @@
+/* বেসিক স্টাইল */
 body { font-family: sans-serif; background: #f4f4f4; margin: 0; padding: 20px; }
-header { text-align: center; background: #ff4500; color: white; padding: 30px; border-radius: 10px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
-.card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+header { 
+    text-align: center; background: #ff4500; color: white; padding: 30px; 
+    border-radius: 10px; animation: fadeInDown 1s ease-out; 
+}
+
+/* কার্ড সাজানোর স্টাইল (লম্বালম্বিভাবে) */
+.grid { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+    margin-top: 20px; 
+}
+
+/* কার্ডের ডিজাইন */
+.card { 
+    background: white; padding: 20px; border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    width: 90%; max-width: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.card:hover { 
+    transform: scale(1.03); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+    cursor: pointer; 
+}
+
+/* ম্যাপ বাটন */
 .map-btn {
     display: inline-block;
     margin-top: 10px;
@@ -11,50 +40,19 @@ header { text-align: center; background: #ff4500; color: white; padding: 30px; b
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-}
-.map-btn:hover {
-    background-color: #218838;
-}
-/* Card animation (nicher theke upore ashbe) */
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeIn 0.8s ease-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Mouse hover effect (touchable feel) */
-.card:hover {
-    transform: scale(1.05); /* Mouse dile ektu boro hobe */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    cursor: pointer; /* Hate-r moto cursor show korbe */
-}
-
-/* Button style */
-.map-btn {
     transition: background 0.3s;
 }
-/* Header animation */
-header {
-    animation: fadeInDown 1s ease-out;
-}
 
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+.map-btn:hover { background-color: #218838; }
+
+/* অ্যানিমেশনসমূহ */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+
 /* স্টার চকচক করার অ্যানিমেশন */
 .rating {
     animation: blink 1.5s infinite alternate;
+    display: inline-block;
 }
 
 @keyframes blink {
