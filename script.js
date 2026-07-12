@@ -24,6 +24,18 @@ const restaurants = [
             "Tandoori Roti: ₹8"
         ],
         mapLink: "https://maps.app.goo.gl/t1MkS85quLrWi3C58"
+    },
+    {
+        name: "SB Restaurant",
+        phone: "Not available", // মেনুতে ফোন নম্বর দেওয়া নেই
+        rating: 4.3,
+        items: [
+            "Chicken Biryani (Full): ₹100", 
+            "Chicken Kosha (Full): ₹160", 
+            "Chilli Chicken (Dry): ₹130", 
+            "Paneer Roll: ₹70"
+        ],
+        mapLink: "https://maps.app.goo.gl/WAZ6HHSGyZCe8y6n6"
     }
 ];
 
