@@ -48,6 +48,18 @@ const restaurants = [
             "Blue Legon Virgin Mojito: ₹89"
         ],
         mapLink: "https://maps.app.goo.gl/t1xQcbYNdX6hbexYA"
+    },
+    {
+        name: "Cafe Music",
+        phone: "09732664583",
+        rating: 4.5, // ছবি দেখে একটি আনুমানিক রেটিং দেওয়া হলো
+        items: [
+            "Chicken Sandwich: ₹80", 
+            "Veg Burger: ₹60", 
+            "Cold Coffee: ₹70", 
+            "French Fries: ₹60"
+        ],
+        mapLink: "https://maps.app.goo.gl/XJmYnTYSNn9muS9M8?g_st=ac"
     }
 ];
 
