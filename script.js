@@ -90,8 +90,23 @@ restaurants.forEach(r => {
     `;
 });
 
+// Mouse Tracker Logic (Updated for Mobile & Desktop)
 const follower = document.querySelector('.cursor-follower');
-document.addEventListener('mousemove', (e) => {
-    follower.style.left = e.clientX + 'px';
-    follower.style.top = e.clientY + 'px';
-});
+
+const moveCursor = (e) => {
+    let x, y;
+    // Check if it's a touch event or mouse event
+    if (e.touches) {
+        x = e.touches[0].clientX;
+        y = e.touches[0].clientY;
+    } else {
+        x = e.clientX;
+        y = e.clientY;
+    }
+    
+    follower.style.left = x + 'px';
+    follower.style.top = y + 'px';
+};
+
+document.addEventListener('mousemove', moveCursor);
+document.addEventListener('touchmove', moveCursor, { passive: false });
