@@ -9,7 +9,7 @@ const restaurants = [
             "Hakka Noodles: ₹69/79/89"
         ],
         // এখানে গুগল ম্যাপের লোকেশন লিংক বসাবেন
-        mapLink: "https://www.google.com/maps/place/The+Wok+Mama/@23.9725,88.6185,17z" 
+        mapLink: "https://maps.app.goo.gl/tLT9G1c4dii3RJVM8?g_st=ac" 
     }
 ];
 
