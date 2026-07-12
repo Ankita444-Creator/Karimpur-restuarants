@@ -1,4 +1,14 @@
-body { font-family: sans-serif; background: #f4f4f4; margin: 0; padding: 20px; }
-header { text-align: center; background: #ff4500; color: white; padding: 30px; border-radius: 10px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
-.card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+const restaurants = [
+    { name: "The Wok Mama", phone: "07718296610" }
+];
+
+const container = document.getElementById('restaurant-container');
+
+restaurants.forEach(r => {
+    container.innerHTML += `
+        <div class="card">
+            <h2>${r.name}</h2>
+            <p><strong>Contact:</strong> ${r.phone}</p>
+        </div>
+    `;
+});
