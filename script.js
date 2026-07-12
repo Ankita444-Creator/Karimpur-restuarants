@@ -12,6 +12,18 @@ const restaurants = [
         rating: 3.9,
         items: ["Chicken Biryani: ₹100", "Egg Roll: ₹40", "Paneer Roll: ₹70", "Chicken Chowmin: ₹80"],
         mapLink: "https://maps.app.goo.gl/ctAA6LNwFcsSYZyE9"
+    },
+    {
+        name: "Premjit Lodge & Restaurant",
+        phone: "9733789579", // মেনু কার্ড থেকে পাওয়া নম্বর
+        rating: 3.7,
+        items: [
+            "Chicken Biryani: ₹120", 
+            "Chicken Butter Masala (Full): ₹300", 
+            "Paneer Butter Masala: ₹100", 
+            "Tandoori Roti: ₹8"
+        ],
+        mapLink: "https://maps.app.goo.gl/t1MkS85quLrWi3C58"
     }
 ];
 
