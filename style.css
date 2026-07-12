@@ -1,12 +1,12 @@
 /* বেসিক স্টাইল */
-body { font-family: sans-serif; background: #f4f4f4; margin: 0; padding: 20px; }
+body { font-family: sans-serif; background: #ffffff; /* তুমি লাইট থিম চেয়েছ তাই #f4f4f4 থেকে #ffffff করলাম */ margin: 0; padding: 20px; }
 
 header { 
     text-align: center; background: #ff4500; color: white; padding: 30px; 
     border-radius: 10px; animation: fadeInDown 1s ease-out; 
 }
 
-/* কার্ডগুলো বাম দিকে সাজানোর এবং চওড়া করার স্টাইল */
+/* কার্ডগুলো বাম দিকে সাজানোর এবং চওড়া করার স্টাইল */
 .grid { 
     display: flex; 
     flex-direction: column; 
@@ -17,14 +17,14 @@ header {
     padding-right: 20px;
 }
 
-/* কার্ডের ডিজাইন - পুরো চওড়া (Flat) */
+/* কার্ডের ডিজাইন - পুরো চওড়া (Flat) */
 .card { 
     background: white; 
     padding: 20px; 
     border-radius: 10px; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
-    width: 100%; /* পুরো জায়গা দখল করবে */
-    max-width: 100%; /* সর্বোচ্চ চওড়া */
+    width: 100%; 
+    max-width: 100%; 
     box-sizing: border-box;
     transition: box-shadow 0.3s ease;
     animation: fadeIn 0.8s ease-out;
@@ -40,7 +40,7 @@ header {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: #28a745;
+    background-color: #ff4500; /* বাটনটিও লাল করে দিলাম তোমার থিমের সাথে মিল রেখে */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -48,13 +48,23 @@ header {
     transition: background 0.3s;
 }
 
-.map-btn:hover { background-color: #218838; }
+.map-btn:hover { background-color: #e03e00; }
+
+/* কনট্যাক্ট সেকশন ডিজাইন */
+.contact-container {
+    background: #fdf2f2; /* হালকা লালচে আভা */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #ff4500;
+    margin-top: 30px;
+}
 
 /* অ্যানিমেশনসমূহ */
 @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
 
-/* স্টার জ্বলজ্বল করার অ্যানিমেশন (কোনো বড়-ছোট হবে না, শুধু জ্বলবে) */
+/* স্টার জ্বলজ্বল করার অ্যানিমেশন */
 .rating {
     animation: blink 1.5s infinite alternate;
     display: inline-block;
@@ -63,4 +73,16 @@ header {
 @keyframes blink {
     from { opacity: 0.6; }
     to { opacity: 1; text-shadow: 0 0 8px #f39c12; }
+}
+
+/* মাউস ট্র্যাকার */
+.cursor-follower {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 69, 0, 0.4);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.05s ease;
+    z-index: 9999;
 }
