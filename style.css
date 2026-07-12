@@ -70,3 +70,36 @@ header {
     from { opacity: 0.6; }
     to { opacity: 1; text-shadow: 0 0 8px #f39c12; }
 }
+/* Mobile-er jonno Media Query */
+@media screen and (max-width: 600px) {
+    /* Header-er padding ektu komiye deya */
+    header { 
+        padding: 15px; 
+    }
+    
+    /* Grid-er padding komiye deya jate screen-er puro jayga pay */
+    .grid { 
+        padding: 0 10px;
+    }
+
+    /* Card-er padding ar border-radius adjust kora */
+    .card { 
+        padding: 15px; 
+    }
+
+    /* Font size mobile-er jonno ektu boro kora jate pora jay */
+    .card h2 { 
+        font-size: 1.3rem; 
+    }
+    
+    .card p, .card li { 
+        font-size: 1rem; 
+    }
+
+    /* Map button mobile-e full width hoye jabe */
+    .map-btn {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
