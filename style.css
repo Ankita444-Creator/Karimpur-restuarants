@@ -1,79 +1,63 @@
 /* বেসিক স্টাইল */
-body { font-family: sans-serif; background: #ffffff; /* তুমি লাইট থিম চেয়েছ তাই #f4f4f4 থেকে #ffffff করলাম */ margin: 0; padding: 20px; }
+body { font-family: sans-serif; background: #ffffff; margin: 0; padding: 20px; }
 
 header { 
     text-align: center; background: #ff4500; color: white; padding: 30px; 
     border-radius: 10px; animation: fadeInDown 1s ease-out; 
 }
 
-/* কার্ডগুলো বাম দিকে সাজানোর এবং চওড়া করার স্টাইল */
+/* কার্ডগুলো সাজানোর স্টাইল */
 .grid { 
     display: flex; 
     flex-direction: column; 
-    align-items: flex-start; 
     gap: 20px; 
     margin-top: 20px; 
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px;
 }
 
-/* কার্ডের ডিজাইন - পুরো চওড়া (Flat) */
+/* কার্ডের ডিজাইন */
 .card { 
     background: white; 
-    padding: 20px; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    padding: 25px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
     width: 100%; 
-    max-width: 100%; 
     box-sizing: border-box;
     transition: box-shadow 0.3s ease;
     animation: fadeIn 0.8s ease-out;
 }
 
-.card:hover { 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
-    cursor: pointer; 
-}
+.card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
 /* ম্যাপ বাটন */
 .map-btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #ff4500; /* বাটনটিও লাল করে দিলাম তোমার থিমের সাথে মিল রেখে */
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #ff4500;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: bold;
-    transition: background 0.3s;
+    font-size: 1rem;
 }
 
-.map-btn:hover { background-color: #e03e00; }
-
-/* কনট্যাক্ট সেকশন ডিজাইন */
+/* কনট্যাক্ট সেকশন */
 .contact-container {
-    background: #fdf2f2; /* হালকা লালচে আভা */
-    padding: 20px;
-    border-radius: 10px;
+    background: #fdf2f2;
+    padding: 30px;
+    border-radius: 12px;
     text-align: center;
     border: 1px solid #ff4500;
-    margin-top: 30px;
+    margin: 40px 20px;
 }
 
-/* অ্যানিমেশনসমূহ */
+/* অ্যানিমেশন */
 @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
 
-/* স্টার জ্বলজ্বল করার অ্যানিমেশন */
-.rating {
-    animation: blink 1.5s infinite alternate;
-    display: inline-block;
-}
-
-@keyframes blink {
-    from { opacity: 0.6; }
-    to { opacity: 1; text-shadow: 0 0 8px #f39c12; }
-}
+.rating { animation: blink 1.5s infinite alternate; display: inline-block; }
+@keyframes blink { from { opacity: 0.6; } to { opacity: 1; text-shadow: 0 0 8px #f39c12; } }
 
 /* মাউস ট্র্যাকার */
 .cursor-follower {
@@ -86,19 +70,13 @@ header {
     transition: transform 0.05s ease;
     z-index: 9999;
 }
-/* মোবাইল ফোনের জন্য ফন্ট সাইজ এবং প্যাডিং সেট করা */
+
+/* মোবাইল রেসপন্সিভ - কার্ডগুলো যাতে ল্যাপটপের মতো বোল্ড দেখায় */
 @media screen and (max-width: 600px) {
     body { padding: 10px; }
-    
-    header { padding: 15px; }
-    header h1 { font-size: 1.5rem; }
-    
-    .card { padding: 15px; }
-    .card h2 { font-size: 1.2rem; }
-    .card p, .card li { font-size: 0.95rem; }
-    
-    .map-btn { font-size: 0.9rem; padding: 8px 12px; }
-    
-    .contact-container { padding: 15px; }
-    .contact-container h2 { font-size: 1.2rem; }
+    .card { padding: 20px; }
+    .card h2 { font-size: 1.4rem; }
+    .card p, .card li { font-size: 1.1rem; }
+    .map-btn { width: 100%; text-align: center; box-sizing: border-box; }
+    .contact-container { margin: 20px 10px; }
 }
