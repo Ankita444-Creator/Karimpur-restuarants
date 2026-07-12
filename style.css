@@ -86,3 +86,19 @@ header {
     transition: transform 0.05s ease;
     z-index: 9999;
 }
+/* মোবাইল ফোনের জন্য ফন্ট সাইজ এবং প্যাডিং সেট করা */
+@media screen and (max-width: 600px) {
+    body { padding: 10px; }
+    
+    header { padding: 15px; }
+    header h1 { font-size: 1.5rem; }
+    
+    .card { padding: 15px; }
+    .card h2 { font-size: 1.2rem; }
+    .card p, .card li { font-size: 0.95rem; }
+    
+    .map-btn { font-size: 0.9rem; padding: 8px 12px; }
+    
+    .contact-container { padding: 15px; }
+    .contact-container h2 { font-size: 1.2rem; }
+}
