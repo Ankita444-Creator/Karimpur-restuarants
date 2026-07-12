@@ -91,3 +91,11 @@ restaurants.forEach(r => {
         </div>
     `;
 });
+// Mouse Tracker Logic
+const follower = document.querySelector('.cursor-follower');
+
+document.addEventListener('mousemove', (e) => {
+    // cursor-follower-এর পজিশন মাউসের সাথে সেট করা হচ্ছে
+    follower.style.left = e.clientX + 'px';
+    follower.style.top = e.clientY + 'px';
+});
