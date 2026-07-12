@@ -11,36 +11,25 @@ const restaurants = [
         phone: "8392073507",
         rating: 3.9,
         items: ["Chicken Biryani: ₹100", "Egg Roll: ₹40", "Paneer Roll: ₹70", "Chicken Chowmin: ₹80"],
-        mapLink: "https://www.google.com/maps" // এখানে ম্যাপের লিংকটি বসিয়ে দাও
+        mapLink: "https://www.google.com/maps"
     }
 ];
 
 const container = document.getElementById('restaurant-container');
 
-restaurants.forEach(r => {
-    container.innerHTML += `
-        <div class="card">
-            <h2>${r.name} <span class="rating">⭐ ${r.rating}</span></h2>
-            <p><strong>Phone:</strong> ${r.phone}</p>
-            <h3>Menu Highlights:</h3>
-            <ul>${r.items.map(i => `<li>${i}</li>`).join('')}</ul>
-            <a href="${r.mapLink}" target="_blank" class="map-btn">View on Google Maps</a>
-        </div>
-    `;
-});
-
-const container = document.getElementById('restaurant-container');
-
-restaurants.forEach(r => {
-    const menuList = r.items.map(item => `<li>${item}</li>`).join('');
-    
-    container.innerHTML += `
-        <div class="card">
-            <h2>${r.name} <span style="font-size: 0.7em; color: #f39c12;">⭐ ${r.rating}</span></h2>
-            <p><strong>Phone:</strong> ${r.phone}</p>
-            <h3>Menu Highlights:</h3>
-            <ul>${menuList}</ul>
-            <a href="${r.mapLink}" target="_blank" class="map-btn">View on Google Maps</a>
-        </div>
-    `;
-});
+// যদি কোনো কারণে কন্টেইনার না পাওয়া যায়, তবেই এরর আসবে
+if (container) {
+    restaurants.forEach(r => {
+        container.innerHTML += `
+            <div class="card">
+                <h2>${r.name} <span class="rating">⭐ ${r.rating}</span></h2>
+                <p><strong>Phone:</strong> ${r.phone}</p>
+                <h3>Menu Highlights:</h3>
+                <ul>${r.items.map(i => `<li>${i}</li>`).join('')}</ul>
+                <a href="${r.mapLink}" target="_blank" class="map-btn">View on Google Maps</a>
+            </div>
+        `;
+    });
+} else {
+    console.error("Error: restaurant-container not found in HTML!");
+}
